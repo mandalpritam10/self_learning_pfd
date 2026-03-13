@@ -1,30 +1,16 @@
-# Get the Environment from User and print it
+env=input("Enter the environment: ")
 
-env = input("Enter the Environment") # taking input from the user (Keyboard) in env variable
+print("The environment is: ",env)
 
-print("The User input Env is: ",env)
+if env== "prd":
+    print("don't deploy on friday")
+elif env== "stg":
+    print("take backup and test well")
+else:
+    print("safe to deploy on any day")
 
-# conditional statement simple if else
+# a=int(input("enter a: "))
+# b=int(input("enter b: "))
 
-# == != > < >= <=
-
-if env == "prd": # True or False
-    print("Don't Deploy on Friday")
-elif env == "stg": # True or False
-    print("Take backup & Test well")
-elif env == "test":
-    print("Test it well")
-else: # False
-    print("Safe to deploy any day")
-
-
-# Type Casting - conversion of 1 data type to another
-a = int(input("Enter the num 1"))
-b = int(input("Enter the num 2"))
-print(type(a))
-print("Multiplication is: ",a*b)
-print("Addition is: ",a+b)
-print("Subtraction is: ",a-b)
-print("Division is: ",a/b)
-
-
+# print("add: ",a+b)
+# print("division: ",a/b)
