@@ -1,25 +1,31 @@
 import requests
 
-API_KEY = "QRHE86JT0WVBQLHI" # Step 1 get API key
+API_KEY = "994YASJB7J9YEJUG" #get api key
 
-api_url = "https://www.alphavantage.co/" # Step 2 find a base URL
+api_url="https://www.alphavantage.co/" #get api url
 
 
 def get_stock_market_data(symbol,is_timeseries):
-    if is_timeseries:
-        query = f"query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={API_KEY}"
-    else:
-        query = f"query?symbol={symbol}&apikey={API_KEY}"
-    response = requests.get(url=api_url+query)
-    for key, value in response.json().items():
-        if is_timeseries:
-            
+
+    query=f"query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={API_KEY}"
+
+    response=requests.get(api_url+query)
+    data=response.json()
+
+    # Check if API returned valid stock data
+    if "Time Series (Daily)" not in data and "Meta Data" not in data:
+        print("Invalid stock symbol. Please enter a valid one like IBM, AMZN, GOOGL.")
+        return
+    
+    for key,value in data.items():
+        if is_timeseries:   
             print(key,value)
         else:
             if key == "Time Series (Daily)":
                 continue
+            print(key,value)
 
 
-symbol = input("Enter the Symbol you want for the Stock Market API eg. (AMZN, GOGL, IBM, etc)")
-is_timeseries = True
+symbol=input("Enter the symbol of the company for which you want the data(e.g. IBM,AMZN,GOGL etc or lowercases also): ")
+is_timeseries=False
 get_stock_market_data(symbol,is_timeseries)

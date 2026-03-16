@@ -1,36 +1,33 @@
-a = [100,200,300, True, 4.6]    # LIST banane ka 1la tareeka
-print(type(a))
-a.append(500)
-print(a)
+myList=[1,4.0,True,"Pritam"]
+print(type(myList))
+print(myList)
 
-clouds = list() # LIST banane ka 2sra tareeka
+clouds=list()
 print(type(clouds))
 
 clouds.append("aws")
 clouds.append("azure")
 clouds.append("gcp")
-clouds.append("ibm")
 clouds.append("alibaba")
+clouds.append("ibm")
 clouds.append("utho")
+
 print(clouds)
-print("Length of list is:", len(clouds))
-print("World Leader for Cloud Service Provider is:",clouds[0])
-print("Indian Cloud Service Provider is:",clouds[-1])
+print(f"Length of the list is: {len(clouds)}")
+print(f"{clouds[-1]} is Indian cloud service")
+print(f"{clouds[0]} is the market leader")
 
-print(dir(clouds))
-print(clouds.extend.__doc__)
+print("we can do such operations in this list: ", dir(clouds))
+
+print(clouds.append.__doc__)
 
 
-# ['aws', 'azure', 'gcp', 'ibm', 'alibaba', 'utho']
-# range(5) -> 0,1,2,3,4
-
-# iterate a list
 for cloud in clouds:
     if cloud == "aws":
-        print(f"{cloud} Market Leader + coverd in course")
+        print(f"{cloud} is market leader of cloud services")
     elif cloud == "utho":
-        print(f"{cloud} Indian Cloud")
+        print(f"{cloud} is indian cloud service")
     elif cloud == "azure" or cloud == "gcp":
-        print(f"{cloud} DevOps - Zero To Hero Me vo bhi cover karoonga")
+        print(f"{cloud} will be covered in this course")
     else:
-        print(f"{cloud} baaki nahi honge")
+        print(f"{cloud} is one of the other cloud services")
