@@ -1,4 +1,4 @@
-from s3_utitlites import AWSUtils
+from s3_utilities import AWSutils
 
 print("Hello from TRY S3 File")
-AWSUtils().show_buckets()
+AWSutils().show_buckets()

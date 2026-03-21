@@ -1,4 +1,5 @@
-from utilities import read_file # importing the package
-# Abstraction
+from utilities import read_file,write_json
 
-print(read_file("app.log"))
+content=read_file("app.log")
+print(content)
+write_json("masti_output.json",content)

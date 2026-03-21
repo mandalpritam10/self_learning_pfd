@@ -1,0 +1,23 @@
+[
+    "2025-01-10 09:00:01 INFO Application started successfully\n",
+    "2025-01-10 09:00:05 INFO Connecting to database\n",
+    "2025-01-10 09:00:07 INFO Database connection established\n",
+    "\n",
+    "2025-01-10 09:05:12 WARNING High memory usage detected\n",
+    "2025-01-10 09:05:15 INFO Memory usage back to normal\n",
+    "\n",
+    "2025-01-10 09:10:22 ERROR Failed to fetch user data\n",
+    "2025-01-10 09:10:25 ERROR Database timeout occurred\n",
+    "\n",
+    "2025-01-10 09:15:30 INFO Retrying database connection\n",
+    "2025-01-10 09:15:32 INFO Database connection successful\n",
+    "\n",
+    "2025-01-10 09:20:45 WARNING Disk usage above 75%\n",
+    "2025-01-10 09:20:50 INFO Disk cleanup initiated\n",
+    "\n",
+    "2025-01-10 09:25:10 ERROR Unable to write logs to disk\n",
+    "2025-01-10 09:25:15 INFO Log rotation completed\n",
+    "\n",
+    "2025-01-10 09:30:00 INFO Application shutdown initiated\n",
+    "2025-01-10 09:30:05 INFO Application stopped\n"
+]
