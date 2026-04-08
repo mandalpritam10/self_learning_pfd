@@ -1,27 +1,23 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter,HTTPException
 from services.aws_service import get_bucket_info
 
-router = APIRouter()
+router=APIRouter()
 
 @router.get("/s3",status_code=200)
-def get_buckets():
-
+def get_metrics():
     try:
-        buckets_info = get_bucket_info()
-        return buckets_info
+        bucket_info=get_bucket_info()
+        return bucket_info
     except:
         raise HTTPException(
             status_code=500,
             detail="Internal Server Error"
         )
-
-
-
+    
 @router.get("/ec2",status_code=200)
 def get_instances():
-
     try:
-        return {"message":"EC2 Utitlites in progress"}
+        return{"message":"EC2 utilities in progress"}
     except:
         raise HTTPException(
             status_code=500,

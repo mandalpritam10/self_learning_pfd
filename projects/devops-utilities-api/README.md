@@ -9,16 +9,15 @@ Internal API surface for common DevOps utilities, intended for internal teams:
 - Log Analysis
 
 ## Usage
-
 ```bash
-git clone <repo-url>
+'git clone <repo-url>'
 cd devops-utilities-api
 ```
 
 ### setup python environment
 ```bash
-python3.14 -m venv venv
-source venv/bin/activate
+python3.14 -m venv env
+source env/bin/activate
 ```
 
 ### install requirements
